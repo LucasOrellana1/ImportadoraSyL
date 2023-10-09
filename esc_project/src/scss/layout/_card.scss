@@ -1,0 +1,47 @@
+.card-contenedor{
+    background-color: $stone;
+    padding: 5rem 5rem 5rem 5rem;
+
+    align-items: center;
+    justify-content: center;
+    @include grid(1, 5rem);
+
+    @include tablet{
+        @include grid(3, 5rem);
+
+    }
+}
+.card{
+    border: 1px solid $teal;
+    text-align: center;
+    padding: 2rem;
+    min-height: 80rem;
+
+    /* Alineación centrada horizontal y verticalmente en cada celda del grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+}
+
+/* Estilo del párrafo de la tarjeta */
+.card-body p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* Estilo del enlace de la tarjeta */
+.card-body a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card-body a:hover {
+    text-decoration: underline;
+}

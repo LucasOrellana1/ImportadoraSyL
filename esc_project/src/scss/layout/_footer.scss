@@ -1,0 +1,41 @@
+/* Estilo del footer */
+.footer {
+    margin-top: 4rem;
+    background-color: $cerulean; /* Color de fondo del footer */
+    color: #fff; /* Color del texto del footer */
+    padding: 20px 0; /* Espacio interno superior e inferior */
+    text-align: center; /* Alineación del texto en el centro */
+}
+
+/* Estilo del contenido del footer */
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 0 20px; /* Espacio interno a los lados del contenido */
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en el footer */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Estilo de los enlaces del footer */
+.footer-links {
+    list-style: none; /* Elimina los marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px; /* Espacio entre los enlaces */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor por encima */
+}
+

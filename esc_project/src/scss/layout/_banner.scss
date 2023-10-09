@@ -1,0 +1,24 @@
+.banner-contenedor{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url("/static/imagenes/banner.jpg");
+    padding: 20rem;
+
+    background-size: cover; /* Escala la imagen para cubrir todo el bloque */
+    background-position: center center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */    
+    background-color: $stone;
+
+    h3{
+        color: $stone;
+        font-weight: bold;
+    }
+
+    p{
+        text-align: center;
+        color: white;
+    
+    }
+}
+

@@ -1,0 +1,51 @@
+header{
+    background-color: $cerulean;
+}
+
+.contenido-header{
+    background-color: $cerulean;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .nav-list {
+        list-style: none; /* Elimina los marcadores de lista */
+        
+    }
+    
+    .nav-item a {
+        color: #fff; /* Color del texto */
+        font-size: 2rem;
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    @include tablet{
+        flex-direction: row;
+
+        .nav-item {
+            display: inline; /* Mostrar los elementos en línea (en una fila) */
+            margin: 0 5rem; /* Espacio entre los elementos */
+        }
+        
+        /* Estilo para los enlaces de navegación */
+        
+    }
+
+    img{
+        aspect-ratio: 10/2;
+        object-fit: contain;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        mix-blend-mode: color-burn;
+        min-height: 12rem;
+    }
+   
+    a:hover {
+        
+        color: darken($color: $stone, $amount: 50%);
+    }
+}
+    

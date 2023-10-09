@@ -1,0 +1,75 @@
+
+    {% include 'includes/header.html' %} 
+
+    <!-- Banner -->
+    <section class="banner-contenedor">
+        <div class="banner-contenido">
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque dolores cupiditate aspernatur quos ab earum nesciunt exercitationem? Perspiciatis, velit molestias.</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, reprehenderit.</p>
+        </div>
+    </section>
+
+    <!-- Guia de contacto -->
+    
+    <section class="info-contenedor">
+        <h1>
+            Más sobre nosotros:
+        </h1>
+        
+        <div class="info-contenido">
+            
+            <div class="icon-1">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3l-4-3H8m4-13H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2v3l4-3h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                  </svg>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+            </div>
+            <div class="icon-2">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3l-4-3H8m4-13H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2v3l4-3h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                  </svg>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+            </div>
+            <div class="icon-3">
+                
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3l-4-3H8m4-13H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2v3l4-3h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    
+                  </svg>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Card de producto -->
+    <h1>
+        Productos: 
+    </h1>
+    <section class="card-contenedor">
+        
+        {% for producto in productos %}
+            <div class="card">
+                <img src="{{ producto.imagen.url }}" alt="Imagen de la tarjeta">
+                <div class="card-body">
+                    <h2>{{ producto.nombre }}</h2>
+                    <p>{{ producto.descripcion }}</p>
+                    <a href="{% url 'detalle_producto' producto.id_producto %}">Ver detalles</a>
+                </div>
+            </div>
+        {% endfor %}
+        
+   
+    </section>
+
+    <!-- Footeer -->
+    
+    {% include 'includes/footer.html' %} 
+
+
+
+</body>
+</html>
