@@ -1,0 +1,64 @@
+.detalle-contenedor{
+    padding: 1rem 5rem 5rem 5rem;
+}
+
+.detalle-contenido{
+
+    @include tablet{
+        @include grid(2, 1rem);
+        width: 100%;
+    }
+
+    col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            aspect-ratio: 3/2;
+            object-fit: contain;
+
+            display: flex;
+            align-items: center;
+        }
+    
+    }
+}
+
+
+.boton-descarga {
+    background-color: #008CBA; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno del botón */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+.boton-descarga:hover {
+    background-color: #005f80; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.border{
+    border: 2px solid $teal;
+    padding: 3rem;
+}
+
+//SWIPER
+.swiper {
+    max-width:100rem;
+}
+
+.swiper-button-prev {
+    margin-right: 5rem !important; /* Ajusta el valor según tu preferencia */
+  }
+  
+  /* Agrega margen izquierdo al botón "Siguiente" */
+  .swiper-button-next {
+    margin-left: 5rem !important; /* Ajusta el valor según tu preferencia */
+  }

@@ -22,6 +22,9 @@ p {
 
 a {
     text-decoration: none;
+    font-family: $fuente_secundaria;
+    text-shadow: 1px 1px 1px $teal;
+
 }
 
 img,
@@ -35,7 +38,7 @@ h1, h2, h3 {
     margin: calc($separacion / 2) 0;
     font-weight: 300;
     text-align: center;
-    
+        
 }
 
 h1 {

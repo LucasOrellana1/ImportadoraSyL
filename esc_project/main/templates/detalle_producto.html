@@ -1,17 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% include 'includes/header.html' %} 
+{% load static %} 
+
+<!-- Swiper import -->
+<link rel="stylesheet" type="text/css" href="{% static 'swipe/swiper-bundle.min.css' %}">
+<h1>{{ producto.nombre }}</h1>
+
+    <div class="detalle-contenedor">
+        <div class="detalle-contenido">
+            
+            <div class="col">
+                <div class="producto-imagen">
+                    <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                </div>
+            </div>
+            
+            <div class="col border">
+                <h4> Descripción : </h4>
+                    <p>{{ producto.descripcion }}</p>
+
+                <h4> Marca : </h4>
+                    <p>{{ producto.marca }}</p>
+
+                <h4> Especificaciones técnicas : </h4>
+                    <p>{{ producto.esp_tecnica }}</p>
+                
+                {% if producto.archivo %}
+                    <!-- Bloque adicional si la clave está presente -->
+                    <h4> Documento técnico : </h4>
+                    <a href="{{ producto.archivo.url }}" download>
+                        <button class="boton-descarga">Descargar Archivo</button>
+                    </a>
+                {% endif %}
+                
+
+            </div>
+            
+        </div>
+
+    </div>
     
-    <h1>{{ producto.nombre }}</h1>
-    <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
-    <p>Descripción: {{ producto.descripcion }}</p>
-    <p>Marca: {{ producto.marca }}</p>
-    <!-- Otros detalles del producto -->
-    
+
+    <h1>Productos que podrian interesarle:</h1>
+
+    <!-- Carrousel productos  -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {% for i in relacionados %}
+            {% if i.tipo == producto.tipo and i.id_producto != producto.id_producto %}
+                <div class="swiper-slide">
+                    <div class="anuncio-contenido">
+
+                        <div class="anuncio-imagen">
+                            <img src="{{ i.imagen.url }}" alt="Imagen de la tarjeta">
+                        </div>
+                        
+                        <div class="anuncio-body">
+                            <h2>{{ i.nombre }}</h2>
+                            <form method="get" action="{% url 'detalle_producto' i.id_producto %}">
+                                <button class="boton-teal" type="submit">Ir al producto</button>
+                            </form> 
+                        </div>
+                    
+                    </div>
+                </div>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+    <!-- IMPORTE DE SWIPER-->
+    <script src="{% static 'js/swiper-bundle.min.js' %}" ></script>
+    <script src="{% static 'js/index.js' %}"></script>
+
 </body>
 </html>
+
+{% include 'includes/footer.html' %} 
