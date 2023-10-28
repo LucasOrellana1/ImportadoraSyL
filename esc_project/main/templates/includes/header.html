@@ -7,11 +7,24 @@
     
     <!-- Importe de archivos SCSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
-    
+
     <title>Pagina Principal</title>
 </head>
 
-<body>
+<body class="visibilidad">
+    <script>
+
+        window.addEventListener("load", function() {
+
+        const elementosAnimados = document.querySelectorAll(".visibilidad");
+        elementosAnimados.forEach(function(elemento) {
+            console.log("1");
+
+            elemento.style.opacity = "1";
+        });
+    });
+    </script>
+
     <!-- Boton de wsp -->
     <a href="https://wa.me/942686753" class="boton-flotante">
         <img src="{% static 'imagenes/wsp.png' %}" alt="">

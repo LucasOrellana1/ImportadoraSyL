@@ -9,7 +9,14 @@ body {
     font-family: $fuente_principal;
     font-size: 1.6rem;
     line-height: 1.8;
+
 }
+.visibilidad{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
 p {
     color: $negro;
     font-size: 2rem;

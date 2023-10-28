@@ -1,12 +1,20 @@
+{% load static %}
 
     {% include 'includes/header.html' %} 
+
+  
+        
 
     <!-- Banner -->
     <section class="banner-contenedor">
         <div class="banner-contenido">
-            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque dolores cupiditate aspernatur quos ab earum nesciunt exercitationem? Perspiciatis, velit molestias.</h3>
+            <h2>"Soluciones de Elevación y Equipos de Construcción"</h2>
+            <h3>"Arriendo de Escaleras Ascensor y Más"</h3>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, reprehenderit.</p>
+            <p>"En [Nombre de tu Empresa], ofrecemos soluciones de elevación y equipos de construcción confiables y eficientes para tus proyectos. Nuestros equipos de alta calidad te ayudarán a alcanzar nuevas alturas en la construcción."</p>
+        
+            <a class="boton-teal" href="{% url 'productos' %}">Explora Nuestros Productos</a>
+
         </div>
     </section>
 
@@ -19,37 +27,129 @@
         
         <div class="info-contenido">
             
-            <div class="icon-1">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
-                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3l-4-3H8m4-13H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2v3l4-3h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
-                  </svg>
-                  <h3>Contacta con nosotros:</h3>
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
-            </div>
-            <div class="icon-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-                    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 1v4a1 1 0 0 1-1 1H1m8-2h3M9 7h3m-4 3v6m-4-3h8m3-11v16a.969.969 0 0 1-.932 1H1.934A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.829 1h8.239A.969.969 0 0 1 15 2ZM4 10h8v6H4v-6Z"/>
-                  </svg>
-                  
-                  <h3>Cotiza el producto:</h3>
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
-            </div>
-            <div class="icon-3">
+            <div class="icon">
+                <div class="info-header">
+                    <svg class="text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3l-4-3H8m4-13H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h2v3l4-3h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
+                    </svg>
+                      <h3>Contacta con nosotros:</h3>
+                     
+                </div>
+                    <div class="info-body">
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+                        
+                    </div>
                 
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
-                  </svg>
-                  <h3>Arrienda:</h3>
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+            </div>
+            <div class="icon">
+                <div class="info-header">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                        <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 1v4a1 1 0 0 1-1 1H1m8-2h3M9 7h3m-4 3v6m-4-3h8m3-11v16a.969.969 0 0 1-.932 1H1.934A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.829 1h8.239A.969.969 0 0 1 15 2ZM4 10h8v6H4v-6Z"/>
+                    </svg>
+                    
+                    <h3>Cotiza el producto:</h3>
+                </div>
+
+                <div class="info-body">
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! </p>
+                </div>
+
+            </div>
+            <div class="icon">
+                <div class="info-header">
+
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
+                    </svg>
+                    <h3>Arrienda:</h3>
+
+                </div>
+
+                <div class="info-body">
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae recusandae ipsum a earum ex aut itaque exercitationem nesciunt aliquid labore! 
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <section class="main-contenedor">
+        <div class="main-contenido">
+            <div class="main">
+                
+                <div class="main-body">
+                    <h3>Nuestros Productos de Importación</h3>
+                    <p>En [Nombre de tu Empresa], nos enorgullece ofrecer una exclusiva selección de productos de importación que son sinónimo de calidad y eficiencia. Nuestra gama de productos incluye dos categorías principales: Ascensores y Paneles Solares.</p>
+                    <a class="boton-teal-inline" href="{% url 'productos' %}">Explora Nuestros Productos</a>
+                   <!--  <h3>Ascensores de Alta Tecnología</h3>
+                    <p>Nuestros ascensores son la elección ideal para proyectos de construcción que requieren un acceso seguro y eficiente en altura. Fabricados con tecnología de punta y estándares de seguridad líderes en la industria, nuestros ascensores garantizan un transporte vertical confiable y seguro en tu sitio de construcción.</p>
+                  
+                    <h3>Paneles Solares Sostenibles</h3>
+                    <p>Como parte de nuestro compromiso con la sostenibilidad, ofrecemos una gama de paneles solares de alta calidad que te permiten aprovechar la energía solar de manera eficiente. Nuestros paneles solares son una solución respetuosa con el medio ambiente que puede ayudarte a reducir los costos de energía y la huella de carbono en tus proyectos de construcción.</p> -->
+                  
+                    <h2>Por Qué Elegirnos</h2>
+                    <ul class="lista-elegirnos">
+                        <li>
+                            <h3>Calidad y Confiabilidad</h3>
+                            <p>En [Nombre de tu Empresa], priorizamos la calidad y la confiabilidad en todos nuestros productos. Nuestra selección de productos de importación cumple con los más altos estándares de calidad.</p>
+                          </li>
+                        
+                          <li>
+                            <h3>Entrega Rápida</h3>
+                            <p>Entendemos la importancia de los plazos en la construcción. Ofrecemos entregas rápidas para que tus proyectos avancen sin problemas.</p>
+                          </li>
+                         
+                    
+                    </ul>
+                </div>
+
+                <div class="main-image">
+                    
+                    <img src="{% static 'imagenes/import.png' %}" alt="Imagen de la tarjeta">
+                </div>
+            </div>
+            
+        <!-- <div class="main-2 margen-bottom"> 
+                <div class="main-body">
+                    <h2>Por Qué Elegirnos</h2>
+                    <ul class="lista-elegirnos margen-bottom">
+                        <li>
+                        <h3>Calidad y Confiabilidad</h3>
+                        <p>Nuestros equipos están diseñados para durar y resistir las condiciones más exigentes de la construcción.</p>
+                        </li>
+                        <li>
+                        <h3>Experiencia y Asesoramiento</h3>
+                        <p>Nuestro equipo cuenta con años de experiencia en la industria de la construcción y está listo para brindarte asesoramiento experto.</p>
+                        </li>
+                        <li>
+                        <h3>Entrega y Atención al Cliente</h3>
+                        <p>Ofrecemos entregas rápidas y un servicio de atención al cliente excepcional para satisfacer tus necesidades.</p>
+                        </li>
+                        
+                        <li>
+                        <h3>Compromiso con la Seguridad</h3>
+                        <p>Nuestros equipos cumplen con las regulaciones de seguridad más estrictas para garantizar la protección de tu equipo y personal.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-image">
+
+                    <img src="{% static 'imagenes/Elevadores-escalera.jpg' %}" alt="Imagen de la tarjeta">
+
+                </div>
             </div>
 
+                
 
-
+            </div> -->
         </div>
     </section>
 
     <!-- Card de producto -->
-    <h1>Productos principales</h1>
+   <!--  <h1>Productos principales</h1>
 
     <section class="anuncio-contenedor">
         {% for producto in productos|slice:":4" %}
@@ -69,7 +169,9 @@
         </div>
         {% endfor %}
     
-    </section>
+    </section> -->
+
+    <!-- Afiliados -->
 
 
     <!-- Footeer -->

@@ -21,3 +21,17 @@
     @include boton($verde, block);
     
 }
+
+.boton-teal{
+    @include boton($teal, block);
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+}
+.boton-teal-inline{
+    @include boton($teal, inline);
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
