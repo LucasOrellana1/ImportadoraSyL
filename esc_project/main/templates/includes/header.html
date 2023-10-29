@@ -7,7 +7,9 @@
     
     <!-- Importe de archivos SCSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
+    <!-- Librería de Swiper (JavaScript) -->
     <title>Pagina Principal</title>
 </head>
 
@@ -18,7 +20,6 @@
 
         const elementosAnimados = document.querySelectorAll(".visibilidad");
         elementosAnimados.forEach(function(elemento) {
-            console.log("1");
 
             elemento.style.opacity = "1";
         });
@@ -39,6 +40,7 @@
         </ul>
     </div>
 
+    <!-- NAV BAR-->
     <header class="w-100">
         <div class=" contenido-header">
             
@@ -47,8 +49,12 @@
                     <img src="{% static 'imagenes/logo.jpg' %}" alt="Logo">
                 </a>
             </div>
-            <nav>
-                <ul class="nav-list">
+            <button class="menu-button">
+                <img src="{% static 'imagenes/h_button.png' %}" alt="">
+            </button>
+
+            <nav class="menu"> 
+                <ul class="nav-list ">
                     <li class="nav-item"><a href="{% url 'index' %}">Inicio</a></li>
                     <li class="nav-item"><a href="{% url 'about' %}">Acerca de</a></li>
                     <li class="nav-item"><a href="{% url 'productos' %}">Productos</a></li>
@@ -58,3 +64,4 @@
             
         </div>
     </header>
+    <script src="{% static 'js/index.js' %}"></script>
