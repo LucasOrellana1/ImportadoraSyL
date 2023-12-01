@@ -1,0 +1,112 @@
+.filtros{
+    background-color: $stone;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    .boton-teal{
+        width: 70%;
+        margin: 2.5rem 1rem 1rem 1rem;
+    }
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: center;
+
+
+        .boton-teal{
+            width: 10%;
+        }
+    }
+}
+
+.anuncio-contenedor{
+    background-color: $stone;
+    padding: 5rem 5rem 5rem 5rem;
+    
+    align-items: center;
+    justify-content: center;
+    @include grid(1, 5rem);
+
+    @include tablet{
+        @include grid(4, 5rem);
+
+    }
+
+    .boton-teal{
+        margin: 0 0;
+    }
+}
+.anuncio-contenido{
+    border-radius: 2rem;
+    background-color: white;
+    text-align: center;
+    box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.5);
+/*     border: 0.5px solid black;
+ */    /* Alineación centrada horizontal y verticalmente en cada celda del grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3{
+        margin: 0 0 1rem 0;
+    }
+   
+    img{
+        display: inline;
+        border-radius: 2rem;
+        margin: 1rem;
+        max-width: 20rem;
+    }
+    @include tablet{
+        img{
+            border-radius: 2rem;
+            margin: 1rem;
+            max-height: 20rem;
+            max-width: none;
+
+            width: auto;
+        }
+    }
+  
+    form{
+        display: flex;
+        justify-content: center; /* Centrado horizontal */
+    }
+    p {
+        font-size: 14px;
+        text-align: justify;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.anuncio-body{
+    background-color: $cerulean;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 2rem 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 4rem;
+
+   
+    a{
+        text-decoration: none;
+        font-weight: 100;
+        color: white;
+        
+    }
+
+}
+

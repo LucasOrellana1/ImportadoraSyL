@@ -1,0 +1,104 @@
+header{
+    background-color: $cerulean;
+}
+
+.contenido-header{
+    background-color: $cerulean;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    @include tablet{
+        
+        @include grid(2, 0.1rem);
+        grid-template-columns: 1fr 2fr;
+        flex-direction: row;
+        max-width: 100%;
+        
+        .nav-item {
+            display: inline; /* Mostrar los elementos en línea (en una fila) */
+            margin: 0 5rem; /* Espacio entre los elementos */
+        }     
+
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    img{
+        object-fit: contain;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        mix-blend-mode: color-burn;
+        max-width: 14rem;
+    }
+}
+    
+
+// Propertys generales: 
+.nav-list {
+    list-style: none; /* Elimina los marcadores de lista */
+    
+}
+
+.nav-item a {
+    color: #fff; /* Color del texto */
+    font-size: 2rem;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.nav-list a:hover {
+        
+    color: darken($color: $stone, $amount: 50%);
+}
+
+.menu{
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease; /* Transición de opacidad de 1 segundo con función de temporización ease */
+    @include tablet{
+        display: flex;
+        opacity: 1;
+    }
+}   
+
+.menu-button {
+    max-width: 20%;
+    padding: 2rem;
+    border: none;
+    background-color: $cerulean;
+
+    @include tablet{
+        display: none;
+    }
+}
+
+
+.contacto-header{
+
+    background-color: $teal;
+    display: flex;
+    
+    
+    .nav-list {
+        margin-left: auto;
+        @include grid(2,2.5rem);
+    }
+    
+    .nav-item {
+        display: inline; /* Mostrar los elementos en línea (en una fila) */
+        margin: 0 1rem; /* Espacio entre los elementos */
+    }
+
+
+    .nav-item a {
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+        
+}

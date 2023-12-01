@@ -1,0 +1,22 @@
+<h1>
+    Productos: 
+</h1>
+<section class="anuncio-contenedor">
+    
+    {% for producto in productos %}
+        <div class="anuncio-contenido">
+
+            <div class="anuncio-imagen">
+                <img src="{{ producto.imagen.url }}" alt="Imagen de la tarjeta">
+            </div>
+            <h3>{{ producto.nombre }}</h3>
+
+            <div class="anuncio-body">
+                <a href="{% url 'detalle_producto' producto.id_producto %}"> Revisar producto</a>
+            </div>
+        
+        </div>
+    {% endfor %}
+    
+
+</section>

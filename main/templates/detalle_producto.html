@@ -1,0 +1,100 @@
+{% include 'includes/header.html' %} 
+{% load static %} 
+
+<!-- Swiper import -->
+<link rel="stylesheet" type="text/css" href="{% static 'swiper/swiper-bundle.min.css' %}">
+<h1>{{ producto.nombre }}</h1>
+
+<div class="detalle-contenedor">
+    <div class="detalle-contenido">
+        
+        <div class="producto-imagen">
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+        </div>
+        
+        <div class="detalle-info">
+            <h4> Descripción : </h4>
+                <p>{{ producto.descripcion }}</p>
+
+            <h4> Marca : </h4>
+                <p>{{ producto.marca }}</p>
+
+            <h4> Especificaciones técnicas : </h4>
+                <p>{{ producto.esp_tecnica }}</p>
+            
+            {% if producto.archivo %}
+                <!-- Bloque adicional si la clave está presente -->
+                <h4> Documento técnico : </h4>
+                <a href="{{ producto.archivo.url }}" download>
+                    <button class="boton-descarga">Descargar Archivo</button>
+                </a>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+    
+
+    <h1>Productos que podrian interesarle:</h1>
+
+   
+</head>
+<body>
+
+<div class="swiper swiper-rel">
+    <div class="swiper-wrapper">
+        {% for i in relacionados %}
+        {% if i.tipo == producto.tipo and i.id_producto != producto.id_producto %}
+            <div class="swiper-slide">
+                
+                <div id="producto" tipo="{{ producto.tipo }}" class="anuncio-contenido">
+            
+                    <div class="anuncio-imagen">
+                        <img src="{{ i.imagen.url }}" alt="Imagen de la tarjeta">
+                        <h3>{{ i.nombre }}</h3>
+                    </div>
+                    
+                    <div class="anuncio-body">
+                        <a href="{% url 'detalle_producto' i.id_producto %}"> Revisar producto</a>
+                    </div>
+                
+                </div>
+            </div>
+        {% endif %}
+  {% endfor %}
+        <!-- Añade más slides según sea necesario -->
+    </div>
+    <!-- Agrega la paginación -->
+<!--     <div class="swiper-pagination"></div>
+ -->    <!-- Agrega las flechas de navegación -->
+   
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-rel', {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    });
+</script>
+
+    <!-- IMPORTE DE SWIPER-->
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+
+</body>
+</html>
+
+{% include 'includes/footer.html' %} 

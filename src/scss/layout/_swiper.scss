@@ -1,0 +1,98 @@
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiperProd{
+    width: 80%;
+    height: 80%;
+    @include tablet{
+        display: none;
+    }
+    .swiper-slide {
+   
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5rem;
+
+        .anuncio-contenido{
+            .anuncio-imagen{    
+                h2{
+                    margin:0 0 1rem 0 ;
+                    font-size: 2.2rem;
+                }
+                img{
+                    width: 75%;
+                    display: flex;
+                }
+             
+        }}
+
+        .anuncio-body{
+            a{
+                font-size: 1.4rem;
+            }
+        }
+
+        img{
+            border-radius: 2px;
+            aspect-ratio: 2/2;
+            object-fit: contain;
+        }
+    }
+
+   
+}
+
+//SWIPER AFILIADOS:
+
+.mySwiper{
+    h3{
+        padding: 1rem;
+        font-size: 2.5rem;
+    }
+        @include tablet{
+            h3{
+                padding: 0;
+                font-size: 3rem;
+            }
+        }
+    .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablet{
+            img{
+                width: 50%;
+            }
+        }
+        
+        img{
+            width: 60%;
+        }
+    }
+}
+
+.swiper-rel{
+    width: 90%;
+    @include tablet{
+        width: 40%;
+
+    }
+    .swiper-wrapper{
+        
+        .swiper-slide{
+        
+          
+            .anuncio-contenido{
+                border: 1px solid rgba(0, 0, 0, 0.3); /* Ancho y color del borde */
+                border-radius: 2rem; /* Radio del borde para crear el efecto difuminado */
+                box-shadow: none;
+            }
+
+        }
+    }
+}

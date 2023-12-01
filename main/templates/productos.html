@@ -1,0 +1,65 @@
+{% load static %} 
+
+{% include 'includes/header.html' %} 
+
+<h1>
+    Productos: 
+</h1>
+
+<div class="filtros">
+    {% for filtro in filtros %}
+
+    <button  value="{{ filtro }}" class="boton-teal filtro">{{ filtro }}</button>
+    
+    {% endfor %}
+</div>
+
+<section class="anuncio-contenedor">
+    
+
+    {% for producto in productos %}
+        
+        <div id="producto" tipo="{{ producto.tipo }}" class="anuncio-contenido">
+            
+            <div class="anuncio-imagen">
+                <img src="{{ producto.imagen.url }}" alt="Imagen de la tarjeta">
+                <h3>{{ producto.nombre }}</h3>
+            </div>
+            
+            <div class="anuncio-body">
+                <a href="{% url 'detalle_producto' producto.id_producto %}"> Revisar producto</a>
+            </div>
+        
+        </div>
+    {% endfor %}
+</section>
+
+<script>
+    
+    const filtros = document.querySelectorAll('.filtro');
+
+    filtros.forEach(filtro => {
+        filtro.addEventListener('click', function() {
+            const tipoFiltro = filtro.value;
+            const productos = document.querySelectorAll('#producto');
+           
+            productos.forEach(producto => {
+                const productoTipo = producto.getAttribute('tipo');
+                console.log("e" + productoTipo);
+
+                if (tipoFiltro === 'Todos' || productoTipo === tipoFiltro) {
+                    producto.style.display = 'flex'; // Mostrar el producto
+                    
+                    
+                } else {
+                    producto.style.display = 'none'; // Ocultar el producto
+                }
+        });
+    })});
+</script>
+
+<!-- {% include 'includes/anuncios.html' %} 
+ -->
+ <script src="{% static 'js/index.js' %}"></script>
+
+{% include 'includes/footer.html' %} 

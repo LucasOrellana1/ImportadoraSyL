@@ -1,0 +1,67 @@
+.detalle-contenedor{
+    padding: 1rem 0 5rem 0;
+}
+
+.detalle-contenido{
+
+    .detalle-info{        
+        h4{
+            margin: 0;
+        }
+
+    }
+    @include tablet{
+        @include grid(2, 1rem);
+        max-height: 60% ;
+
+        .detalle-info{
+            max-width: 70%;
+            
+            h4{
+                margin: 0;
+            }
+        }
+    }
+
+    .producto-imagen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      
+
+        img{
+            max-width: 50%;
+
+        }
+    }
+
+    .detalle-info{
+        background-color: $stone;
+        padding: 5rem;
+        
+        
+    }
+
+}
+
+
+.boton-descarga {
+    background-color: #008CBA; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno del botón */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+.boton-descarga:hover {
+    background-color: #005f80; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
