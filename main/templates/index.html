@@ -21,27 +21,35 @@
      
 
         <div class="card">
-            <img src="{% static 'imagenes/geda_logo.png' %}" alt="Imagen" class="card-img">
+            <img src="{% static 'imagenes/svg/camion.png' %}" alt="Imagen" class="card-img">
             
             <div class="card-content">
                 <h3 class="card-title">Retiro y disposición de asbesto</h3>
-                <a href="" class="btn">Ver más</a>
+                <a href="{% url 'Asbesto' %}" class="btn">Ver más</a>
             </div>
         </div>
 
         <div class="card">
-            <img src="{% static 'imagenes/geda_logo.png' %}" alt="Imagen" class="card-img">
+            <img src="{% static 'imagenes/svg/construccion.png' %}" alt="Imagen" class="card-img">
             <div class="card-content">
                 <h3 class="card-title">Construcción</h3>
-                <a href="" class="btn">Ver más</a>
+                <a href="{% url 'construccion' %}" class="btn">Ver más</a>
             </div>
         </div>
         
         <div class="card">
-            <img src="{% static 'imagenes/geda_logo.png' %}" alt="Imagen" class="card-img">
+            <img src="{% static 'imagenes/svg/panel-solar.png' %}" alt="Imagen" class="card-img">
             <div class="card-content">
                 <h3 class="card-title">Instalación colectores solares</h3>
-                <a href="" class="btn">Ver más</a>
+                <a href="{% url 'solar' %}" class="btn">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'imagenes/svg/engran.png' %}" alt="Imagen" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Arriendo de maquinaria</h3>
+                <a href="{% url 'productos' %}" class="btn">Ver más</a>
             </div>
         </div>
     </div>
@@ -109,48 +117,6 @@
         </div>
     </section>
     <!--  Cierre ¿Por qué elegirnos?? -->
-
-
-
-
-
-    <!-- Main -->
-    <!-- <section class="main-contenedor">
-        <div class="main-contenido">
-            <div class="main">
-                
-                <div class="main-body">
-                    <h1>¿Por Qué Elegirnos?</h1>
-
-                    <ul class="lista-elegirnos">
-                        <li>
-                            <h3>Nuestros Productos de Importación</h3>
-
-                            <p>En [Nombre de tu Empresa], nos enorgullece ofrecer una exclusiva selección de productos de importación que son sinónimo de calidad y eficiencia. Nuestra gama de productos incluye dos categorías principales: Ascensores y Paneles Solares.</p>
-                        </li>
-                        
-                        <a class="boton-teal" href="{% url 'productos' %}">Explora Nuestros Productos</a>
-                        <li>
-                            <h3>Calidad y Confiabilidad</h3>
-                            <p>En [Nombre de tu Empresa], priorizamos la calidad y la confiabilidad en todos nuestros productos. Nuestra selección de productos de importación cumple con los más altos estándares de calidad.</p>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div class="main-image">
-                    
-                    <img src="{% static 'imagenes/p_solar.jpg' %}" alt="Imagen de la tarjeta">
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
- -->
-    <!-- Cierre main -->
-
 
 
     <!-- Afiliados -->

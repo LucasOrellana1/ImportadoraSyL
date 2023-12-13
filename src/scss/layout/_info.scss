@@ -1,16 +1,16 @@
 .info-contenedor{
-    padding: 2rem 0;
-    background-color: $stone;
-
-    h1{
-        margin: 0;
-    }   
 
     h1::after{
         @include subr($teal, 0.4rem);
     }
 }
 
+.bg-white{
+    background-color: white;
+}
+.bg-stone{
+    background-color: $stone;
+}
 
 .info-contenido{
     margin: 0rem 3rem 1rem 3rem;
@@ -24,27 +24,19 @@
     .info-header{
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         h3{
             font-size: 2rem;
             font-weight: 500;
-            padding: 1rem;
         }
-    }
+        svg{
+            width: 5rem; /* Tamaño deseado del contenedor */
+            height: 5rem;
+            path{
+                stroke: $teal;
 
-    .info-body{
-       
-        p{
-            margin: 0 0 2rem 0;
-        }
-    }
-
-    svg{
-        width: 5rem; /* Tamaño deseado del contenedor */
-        height: 5rem;
-        
-        path{
-            stroke: $teal;
+            }
+            
         }
     }
     p{
@@ -53,131 +45,9 @@
     }
 }
 
-//Bloque principal 
-.main-contenedor{
-    background-color: $stone;
-    .main, .main-2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        justify-items: center; 
-        .main-image{
-            display: none;
-        }
-        .main-body{
-            padding:0 2rem 4rem 2rem;
-            
-            text-align: center;
-            h3{
-                margin: 2rem 0 2rem 0;
-                font-size: 1.8rem;
-                font-weight: 400;
-            }
-            p{
-                margin: 0 0 2rem 0;
-                padding: 1rem;
-                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                font-size: 1.5rem;
-            }
-            h2{
-               
-            }
-          
-        ul{
-            
-            list-style: none;
-            padding: 0;
-            
-            
-        }
-    }}
-
-    @include tablet{
-    .main, .main-2{
-
-        @include grid(2,5rem);
-            padding: 5rem 10rem;
-            
-            .main-image{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                object-fit: contain;
-            }
-    
-            .main-body{
-                text-align: center;
-                font-size: 1.5rem;
-                h3{
-                    margin: 0 0 2rem 0;
-                    font-size: 3rem;
-                }
-                h2{
-                    display: block;
-                }
-                p{
-                    margin: 0 0 2rem 0;
-                    padding: 1rem;
-                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                    font-size: 1.5rem;
-                }
-                
-                .lista-productos, .lista-elegirnos {
-                    padding: 0;
-                    list-style: none;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    li {
-                        display: flex;
-
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        max-width: 50rem;
-                        border: 1px solid #ccc;
-                        background-color: #fff;
-                        margin: 1rem;
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                        border-radius: 1rem;
-                    
-                      h3 {
-                        font-size: 2.5rem;
-                        margin: 0 0 10px;
-                        background-color: $teal;
-                        width: 100%;
-                        border-radius: 0 0 0 1rem;
-                        font-weight: 400;
-                        color: white;
-                      }
-                      p {
-                        padding: 1.2rem;
-                        font-size: 1.8rem;
-                        margin: 1rem 0;
-                        color: #555;
-                        justify-items: center;
-                        text-align: center;
-                      }
-                      a{
-                        width: 70%;
-                        margin: 0 0 2rem 0;
-                      }
-                    
-                    }
-                  }
-                }
-            }
-        }                
-    }           
-.main{
-    padding-top: 2rem;
+path{
+    stroke: $teal;
 }
-.margen-bottom{
-    margin-bottom: 2rem;
-}
+
+//Informacion asbesto
 

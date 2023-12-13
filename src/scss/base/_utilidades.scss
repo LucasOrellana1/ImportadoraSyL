@@ -24,6 +24,8 @@ h1::after{
 
 }
 
+
+
 .boton-flotante {
     position: fixed; /* Posición fija en la ventana del navegador */
     bottom: 2rem; /* Distancia desde la parte inferior */
@@ -37,4 +39,18 @@ h1::after{
     img{
         max-width: 6rem;
     }
+}
+
+.bg-white{
+    background-color: white;
+}
+.bg-stone{
+    background-color: $stone;
+}
+.p-2{
+    padding: 2rem 0rem;
+}
+
+.m-2{
+    margin: 2rem 0rem;
 }

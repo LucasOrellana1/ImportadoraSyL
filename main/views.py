@@ -36,6 +36,15 @@ def producto(request, id_producto):
     return render(request, 'detalle_producto.html', {'producto': producto, 'relacionados' : relacionados})
 
 
+#Servicios
+def asbesto(request):
+    return render(request, 'retiroAsbesto.html')
+
+def construccion(request):
+    return render(request, 'construccion.html')
+
+def solar(request):
+    return render(request, 'solar.html')
 
 #BD:
 

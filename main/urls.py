@@ -13,6 +13,12 @@ urlpatterns = [
 
     path('producto/<int:id_producto>/', views.producto, name='detalle_producto'),
 
+    #Servicio
+    path('retiroAsbesto/', views.asbesto, name = 'Asbesto'),
+    path('construccion/', views.construccion, name = 'construccion'),
+    path('solar/', views.solar, name = 'solar'),
+
+
 ]
 
 #Permite que se vean las imagenes de la BD:
