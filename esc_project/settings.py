@@ -13,6 +13,7 @@ import dj_database_url
 import os
 from pathlib import Path
 from re import S
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
