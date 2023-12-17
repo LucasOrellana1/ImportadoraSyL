@@ -1,6 +1,8 @@
+{% load static %}
+
 {% include 'includes/header.html' %} 
-<!-- <h1>Contacto</h1>
- --><section class="banner-contenedor-contacto">
+
+<section class="banner-contenedor-contacto">
     
     </section>
 
@@ -9,26 +11,22 @@
     <h1>Contactenos</h1>
     <div class="contacto-contenido">
     
-        <div>
-
-            <a href="mailto:orellanalucas1@gmail.com?subject=Asunto del correo&body=Cuerpo del mensaje"> 
-                <div class="contacto">
-                    <p>lu.orella@doc.cl</p>
-                    <h2>Correo</h2>
+        <div class="contenedor-cards">
+            <div class="card">
+                
+                <div class="card-content">
+                    <img src="{% static 'imagenes/svg/correo.png' %}" alt="Imagen mail" class="card-img">
+                    <h3 class="card-title">Envianos un correo</h3>
                 </div>
-            </a>
+                <a style="margin: 1rem;" href="" class="btn">Contactanos</a>
+        
+            </div>
         </div>
         
+        {% include 'includes/contCard.html' %} 
 
         
-        <div>
-            <a href="https://www.youtube.com/watch?v=VOIpqtUb0zs&t=5581s"> 
-                <div class="contacto">
-                    <p>+56 9 0000 4444</p>
-                    <h2>WhatsApp</h2>
-                </div>
-            </a>
-        </div>
+
     
     </div>
 </section>

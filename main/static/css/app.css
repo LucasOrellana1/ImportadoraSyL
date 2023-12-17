@@ -357,6 +357,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 3.8rem;
+  margin: 0.67em 0;
 }
 
 h2 {
@@ -476,11 +477,12 @@ header {
   list-style: none; /* Elimina los marcadores de lista */
 }
 
-.nav-item a {
+.nav-item a, span {
   color: #fff; /* Color del texto */
   font-size: 2rem;
   text-decoration: none; /* Elimina el subrayado de los enlaces */
   font-weight: bold; /* Texto en negrita */
+  text-shadow: 1px 1px 1px #08708A;
 }
 
 .nav-list a:hover {
@@ -528,6 +530,36 @@ header {
 .contacto-header .nav-item a {
   font-size: 1.5rem;
   font-weight: 100;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos de los enlaces del dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
 .banner-contenedor {
@@ -665,9 +697,6 @@ header {
   width: 5rem; /* Tamaño deseado del contenedor */
   height: 5rem;
 }
-.info-contenido .info-header svg path {
-  stroke: #08708A;
-}
 .info-contenido p {
   text-align: center;
   font-size: 1.5rem;
@@ -675,6 +704,34 @@ header {
 
 path {
   stroke: #08708A;
+}
+
+.listaVentaja {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #cbced3;
+}
+.listaVentaja .ventaja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  flex: 1 0 300px;
+  border-radius: 8px;
+}
+.listaVentaja .ventaja .iconoVentaja {
+  padding: 1rem;
+  width: 15%;
+  height: auto;
+  stroke: #56B1BF;
+}
+.listaVentaja .ventaja h4 {
+  font-size: 14px;
 }
 
 .filtros {
@@ -1166,7 +1223,6 @@ swiper-container {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 .contenedor-cards .card .card-img {
-  margin-top: 2rem;
   padding: 1rem;
   width: 30%;
   height: auto;
@@ -1182,7 +1238,6 @@ swiper-container {
 .contenedor-cards .card .card-title {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
-  margin-bottom: 8px;
   padding: 0rem;
 }
 .contenedor-cards .card .btn {

@@ -32,10 +32,6 @@
         svg{
             width: 5rem; /* Tamaño deseado del contenedor */
             height: 5rem;
-            path{
-                stroke: $teal;
-
-            }
             
         }
     }
@@ -49,5 +45,40 @@ path{
     stroke: $teal;
 }
 
-//Informacion asbesto
+//Listados de ventajas: 
+
+.listaVentaja {
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: $stone;
+    
+    .ventaja {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+
+        flex: 1 0 300px;
+      
+        border-radius: 8px;
+        
+        .iconoVentaja {
+            padding: 1rem;
+            width: 15%;
+            height: auto;
+            stroke: $cerulean;
+          }
+        h4{
+            font-size: 14px;
+        }
+    }
+    
+}
+
 
