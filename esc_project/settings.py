@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,14 +30,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
-# DEBUG = os.environ.get("DEBUG", "False").lower() == "True" 
-DEBUG = True
+DEBUG = os.environ.get("DEBUG")
 
 
-#ALLOWED_HOSTS = os.environ.get("ALLOWED_HOST").split(" ") 
 
-ALLOWED_HOSTS = ['arriendoesc.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['arriendoesc.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
